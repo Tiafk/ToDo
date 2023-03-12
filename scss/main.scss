@@ -1,0 +1,81 @@
+@import './_header.scss';
+@import './pop-up.scss';
+@import './_wrapper.scss';
+
+// ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
+$green: #008D49;
+$black: #1E1E1E;
+$gray: #D9D9D9;
+$blue: #1E5DFF;
+$red: #FF3A3A;
+$lite-green: #36CE00;
+$yellow: #D5E800;
+$white: #fff;
+
+$colors: (
+  color-green: $green,
+  color-black: $black,
+  color-gray: $gray,
+  color-blue: $blue,
+  color-red: $red,
+  color-lite-green: $lite-green,
+  color-yellow: $yellow,
+  color-white: $white,
+);
+
+
+@font-face {
+  font-family: 'Pacifico';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/Pacifico-Regular.eot'),
+  url('./fonts/Pacifico-Regular.ttf'),
+  url('./fonts/Pacifico-Regular.woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1E1E1E;
+}
+
+button {
+  font-family: sans-serif;
+  border: none;
+  background-color: transparent;
+}
+
+.open {
+  border: 0;
+  padding: 0;
+  max-height: none;
+  transition: .4s;
+  box-shadow: (0px 0px 0px rgba(0, 0, 0, 0));
+  .btn {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.visible {
+  max-height: none !important;
+  position: relative !important;
+  visibility: visible !important;
+  pointer-events: all !important;
+  opacity: 1 !important;
+  transition: .4s !important;
+}
+
+.defolt {
+  color: rgb(204, 204, 204);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12%;
+  letter-spacing: 0.07em;
+}

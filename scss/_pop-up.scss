@@ -1,0 +1,199 @@
+.pop-up {
+  display: flex;
+  cursor: default;
+  max-height: 55px;
+  position: absolute;
+  align-self: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  .create-container {
+    display: flex;
+    margin-bottom: 15px;
+    .container-create-task {
+      margin-right: 40px;
+      }
+    }
+  &__steps {
+    display: flex;
+    margin-top: 26px;
+    .steps__number {
+      font-size: 13px;
+      color: #000;
+      font-weight: 600;
+      font-family: sans-serif;
+      background-color: #D9D9D9;
+      border: none;
+      border-radius: 5px;
+      padding: 3px 10px;
+      margin-right: 13px;
+    }
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #236244;
+      font-size: 16px;
+      color: #fff;
+      outline: none;
+      ::placeholder {
+        font-weight: 600;
+        color: #AEAEAE;
+      }
+    }
+  }
+  &__block-arrow-top {
+    display: flex;
+    position: relative;
+    .arrow-top-left {
+      display: flex;
+      position: absolute;
+      left: 0;
+      .top-line {
+        width: 3px;
+        height: 52px;
+        border-radius: 6px 0 6px 6px;
+        background-color: #008D49;
+      }
+      .bot-line {
+        width: 52px;
+        height: 3px;
+        border-radius: 0 6px 6px 0;
+        background-color: #008D49;
+      }
+    }
+    .arrow-top-right {
+      display: flex;
+      position: absolute;
+      right: 0;
+      .top-line {
+        width: 52px;
+        height: 3px;
+        border-radius: 6px 0 6px 6px;
+        background-color: #008D49;
+      }
+      .bot-line {
+        width: 3px;
+        height: 52px;
+        border-radius: 0 6px 6px 0;
+        background-color: #008D49;
+      }
+    }
+  }
+  &__block-arrow-bot {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    align-items: end;
+    .arrow-bot-left {
+      display: flex;
+      position: absolute;
+      left: 0;
+      .top-line {
+        width: 3px;
+        height: 52px;
+        border-radius: 6px 6px 0 6px;
+        background-color: #008D49;
+      }
+      .bot-line {
+        width: 52px;
+        height: 3px;
+        border-radius: 0 6px 6px 0;
+        background-color: #008D49;
+        align-self: end;
+      }
+    }
+    .arrow-bot-right {
+      display: flex;
+      position: absolute;
+      right: 0;
+      .top-line {
+        width: 52px;
+        height: 3px;
+        border-radius: 6px 0 0 6px;
+        background-color: #008D49;
+        align-self: end;
+      }
+      .bot-line {
+        width: 3px;
+        height: 52px;
+        border-radius: 6px 6px 6px 0;
+        background-color: #008D49;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    .title {
+      text-align: center;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    color: #fff;
+  }
+  &__note{
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    input {
+      font-size: 20px;
+      color: black;
+      padding: 10px 14px;
+      border-radius: 10px;
+      outline:none;
+      border: 0;
+      &::placeholder {
+        display: flex;
+        font-size: 16px;
+        color: #9A9A9A;
+      }
+    }
+  }
+  &__block-color {
+    display: flex;
+    padding-top: 26px;
+    .eclipse {
+      cursor: pointer;
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      background: #D9D9D9;
+      margin-right: 12px;
+    }
+    .blue {
+      border: 5px solid #1E5DFF;
+    }
+    .red {
+      border: 5px solid #FF3A3A;
+    }
+    .green {
+      border: 5px solid #36CE00;
+    }
+    .yellow {
+      border: 5px solid #D5E800;
+    }
+    .black {
+      border: 5px solid #fff;
+    }
+  }
+  &__btn-block {
+    align-self: center;
+    padding: 29px 0 10px 0;
+    .save, .cancel {
+      cursor: pointer;
+      text-align: center;
+      padding: 4px 8px;
+      font-size: 20px;
+      border: 2px solid #1C9A63;
+      color: #1C9A63;
+      border-radius: 6px;
+      background-color: transparent;
+    }
+    .save {
+      margin-right: 24px;
+    }
+  }
+}

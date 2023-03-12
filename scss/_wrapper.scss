@@ -1,0 +1,209 @@
+.wrapper-task {
+  display: flex;
+  width: 520px;
+  align-items: center;
+  flex-direction: column;
+  padding: 96px 20px 0 20px;
+  &__title {
+    user-select: none;
+    width: 205px;
+    line-height: 0.6;
+    text-align: center;
+    font-family: 'Pacifico' sans-serif;
+    font-size: 64px;
+    color: #fff;
+  }
+
+  &__task-create {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    max-height: 55px;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: 4px solid #008D49;
+    padding: 12px 21px;
+    margin-top: 50px;
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    .btn {
+      display: flex;
+      img {
+        padding-left: 12px;
+      }
+    }
+
+  }
+
+  &__line-left {
+    display: flex;
+    .top-line {
+      width: 4px;
+      height: 25px;
+      border-radius: 6px 0 6px 6px;
+      background-color: #008D49;
+    }
+    .bot-line {
+      width: 25px;
+      height: 4px;
+      border-radius: 0 6px 6px 0;
+      background-color: #008D49;
+    }
+  }
+
+  &__line-right {
+    display: flex;
+    position: relative;
+    justify-content: end;
+    .top-line {
+      width: 25px;
+      height: 4px;
+      border-radius: 6px 0 0 6px;
+      background-color: #008D49;
+      align-self: end;
+    }
+    .bot-line {
+      width: 4px;
+      height: 25px;
+      border-radius: 6px 6px 6px 0;
+      background-color: #008D49;
+      bottom: 0;
+    }
+  }
+
+  &__block-task {
+    display: flex;
+    max-width: 1140px;
+    align-self: flex-start;
+    flex-direction: column;
+    margin-top: 27px;
+  }
+
+  &__finished {
+    cursor: pointer;
+    flex-direction: column;
+    align-self: start;
+    position: relative;
+    margin-top: 35px;
+    opacity: 0;
+    transition: 0.3s ease;
+    .finished-btn {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      z-index: 100;
+      user-select: none;
+      .text {
+        letter-spacing: 0.2em;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        color: #FFFFFF;
+        padding-right: 11px;
+      }
+      img {
+        transition: 0.3s;
+        max-width: 13px;
+        transform: rotate(-90deg);
+      }
+      .counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        min-width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #008D49;
+        margin-left: 10px;
+        p {
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+    }
+    .arrowdrop {
+      img {
+        transition: 0.3s;
+        transform: rotate(0deg);
+      }
+    }
+    .finished-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 1100px;
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
+      .task {
+        color: #aeaeae;
+      }
+    }
+  }
+  .task {
+    display: flex;
+    padding: 10px 0;
+    label {
+      cursor: pointer;
+      display: flex;
+      user-select: none;
+    }
+    input {
+      display: none;
+      user-select: none;
+      &:checked ~ span::before {
+        opacity: 1;
+      }
+    }
+    span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      border: 3px solid #008D49;
+      border-radius: 5px;
+      &::before {
+        content: "";
+        opacity: 0;
+        user-select: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 1px;
+        border: 2px solid #005c30;
+        background: #008D49;
+        z-index: 100;
+      }
+    }
+    .text { 
+      cursor: pointer;
+      font-family: 'Pacifico' serif;
+      font-size: 18px;
+      max-width: 1000px;
+      color: #fff;
+      margin-left: 15px;
+      user-select: none;
+    }
+    img {
+      margin-left: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .complited {
+    transition: 0.3s ease;
+    .text {
+      color: #aeaeae;
+      text-decoration: line-through;
+    }
+  }
+  .removing {
+    opacity: 0;
+    transition: 0.2s ease-in-out opacity;
+  }
+}
