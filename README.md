@@ -1,4 +1,4 @@
-# ToDo
+# Задачник (JS)
 
-Задачник (JS)
+
 https://tiafk.github.io/ToDo/
